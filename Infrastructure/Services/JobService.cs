@@ -15,12 +15,12 @@ public class JobService
         return await context.Jobs.FindAsync(id);
     }
 
-  public async Task<Job> AddGetJob(Job job){
+  public async Task<Job> AddJob(Job job){
    await context.Jobs.AddAsync(job);
    await context.SaveChangesAsync();
    return job;
   }
-  public async Task< Job> UpdateGetJob(Job job){
+  public async Task< Job> UpdateJob(Job job){
     var find=await context.Jobs.FindAsync(job.JobId);
  find.JobTitle=job.JobTitle;
  find.MaxSalary=job.MaxSalary;

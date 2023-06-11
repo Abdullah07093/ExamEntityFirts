@@ -22,15 +22,15 @@ public async Task<Job> GetJobById(int id){
     return await jobService.GetJobByIdById(id);
 }
 
-    [HttpPost("AddGetJob")]
+    [HttpPost("AddJob")]
 
-public async Task<Job> AddGetJob(Job jobGrade){
-    return await jobService.AddGetJob( jobGrade);
+public async Task<Job> AddJob(Job jobGrade){
+    return await jobService.AddJob( jobGrade);
 }
-  [HttpPut("UpdateGetJob")]
+  [HttpPut("UpdateJob")]
 
-public async Task<Job> UpdateGetJob(Job jobGrade){
-    return await jobService.UpdateGetJob( jobGrade);
+public async Task<Job> UpdateJob(Job jobGrade){
+    return await jobService.UpdateJob( jobGrade);
 }
  [HttpDelete("DeleteJob")]
 

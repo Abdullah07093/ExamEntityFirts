@@ -11,28 +11,28 @@ public class DepartmentController:ControllerBase{
     {
         this.departmentService=departmentService;
     }
-    [HttpGet("GetCountry")]
+    [HttpGet("GetDepartments")]
 
 public async Task<List<Department>> GetCountrys(){
     return await departmentService.GetDepartments();
 }
-    [HttpGet("GetcountryById")]
+    [HttpGet("GetDepartmentById")]
 
 public async Task<Department> GetCountryById(int id){
     return await departmentService.GetDepartmentById(id);
 }
 
-    [HttpPost("AddCountry")]
+    [HttpPost("AddDepartment")]
 
 public async Task<Department> AddDepartment(Department department){
     return await departmentService.AddDepartment( department);
 }
-  [HttpPut("UpdateCountry")]
+  [HttpPut("UpdateDepartment")]
 
 public async Task<Department> UpdateDepartment(Department department){
     return await departmentService.UpdateDepartment( department);
 }
- [HttpDelete("DeleteCountry")]
+ [HttpDelete("DeleteDepartment")]
 
 public async Task<bool> DeleteDepartment(int id){
     return await departmentService.DeleteDepartment( id);

@@ -4,10 +4,10 @@ namespace WEbApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class JobHistoryControlle:ControllerBase{
+public class JobHistoryController:ControllerBase{
     private readonly JobHistoryService jobHistory;
 
-    public JobHistoryControlle(JobHistoryService jobHistory)
+    public JobHistoryController(JobHistoryService jobHistory)
     {
         this.jobHistory=jobHistory;
     }
